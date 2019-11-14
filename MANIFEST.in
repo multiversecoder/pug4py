@@ -1,0 +1,5 @@
+prune pug4py.egg-info
+
+include pug4py/pug_compile.js
+include pug4py/yarn.lock
+include pug4py/package.json

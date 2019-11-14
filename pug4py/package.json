@@ -1,0 +1,13 @@
+{
+  "name": "pug4py",
+  "version": "1.0.0",
+  "description": "Pug4Py is a tool that allows you to integrate Pug js as a templating engine into any Python framework.",
+  "main": "index.js",
+  "repository": "https://github.com/multiversecoder/pug4py",
+  "author": "Adriano Romanazzo",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "pug": "^2.0.4"
+  }
+}

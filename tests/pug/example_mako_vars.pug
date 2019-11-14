@@ -1,0 +1,17 @@
+// mako_vars = [greet]
+
+doctype html
+html(lang="en")
+  head
+    title= ciaooo
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    h1 Pug Python Example
+    #container.col
+      p ${greet}
+      p.
+        ${say_hello()}
+    footer.
+      MIT Licensed by #{author} - #{year}
+
