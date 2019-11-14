@@ -13,7 +13,7 @@ with open(README) as r:
 
 setup(
     name='pug4py',
-    version='1.0',
+    version='1.0.1',
     author='Adriano Romanazzo (multiversecoder)',
     description='Pug4Py is a tool that allows you to integrate Pug js as a templating engine into any Python framework.',
     long_description=README,
