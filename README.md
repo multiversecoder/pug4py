@@ -7,7 +7,7 @@ Pug is a tool similar to HAML (or better its evolution) that allows you to abstr
 
 Check pug.js on:
 
-[https://pugjs.org/api/getting-started.html](Pugjs.org)
+[Pugjs.org](https://pugjs.org/api/getting-started.html)
 
 What is pug4py?
 -------------
