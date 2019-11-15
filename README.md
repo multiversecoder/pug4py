@@ -1,5 +1,15 @@
 # Pug4Py - Pug Templates for Python
 
+What is Pug (Pug.js)?
+---------------------
+
+Pug is a tool similar to HAML (or better its evolution) that allows you to abstract the html syntax, preventing errors and improving the speed of frontend development. 
+
+Check pug.js on
+
+    [https://pugjs.org/api/getting-started.html](Pugjs.org)
+    [https://github.com/pugjs/pug](Pug.js on github)
+
 What is pug4py?
 -------------
 
