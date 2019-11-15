@@ -9,8 +9,6 @@ Check pug.js on:
 
 [https://pugjs.org/api/getting-started.html](Pugjs.org)
 
-[https://github.com/pugjs/pug](Pug.js on github)
-
 What is pug4py?
 -------------
 
