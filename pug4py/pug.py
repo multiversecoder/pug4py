@@ -77,7 +77,7 @@ class Pug:
 
     def __check_for_node(self) -> None:
         """
-        Check if the node intepreter is installed
+        Check if node is installed
 
         Raises
         ------
@@ -95,14 +95,12 @@ class Pug:
 
     def __prepare_for_mako(self, filename: str, **kwargs) -> Tuple[Dict[str, Callable], Dict[str, Callable]]:
         """
-        This methodo looks for if there are python functions or magic comments
-        inside the template to render.
-
+        Check if there are python functions or magic comments
+        
         Note
         ----
             The magic comment is: // mako_vars = [var1, var2, ...]
-            This magic comment is sensitive to new lines and will be stripped from html after the transfer to
-        the node interpreter.
+            This magic comment is sensitive to new lines and will be stripped from html after the transfer to node.
 
         After opening the file we look for the magic comment at the beginning of the file and if present
         we add the variables declared into mdict, a dictionary that contains the values to be rendered with mako.
@@ -190,8 +188,7 @@ class Pug:
 
     def __create_tmp_json(self, args: dict) -> str:
         """
-        Creates a temporary file containing the variables to be passed to the node interpreter using
-        json
+        Creates a temporary file containing the variables to be passed to node using json
 
         Parameters
         ----------
@@ -218,20 +215,20 @@ class Pug:
         # check if mkwargs is not empty
         if mkwargs != {}:
             mako_rendered = self.__render_with_mako(filename, **mkwargs)
-            # creates a temp file with the rendered template to pass to node interpreter
+            # creates a temp file with the rendered template to pass to node
             temp_tpl = self.__create_tmp_tpl(mako_rendered)
 
         # creates a file with kwargs (json)
         temp_json = self.__create_tmp_json(kwargs)
 
-        # return the pug js rendered template
+        # return the template rendered by pug.js
         ret = subprocess.check_output(["node",
                                        f"{os.path.abspath(os.path.dirname(__file__))}/pug_compile.js",
                                        self.template_dir, filename if "temp_tpl" not in locals() else temp_tpl, temp_json], shell=False).decode("utf-8")
 
         # deletes the temporary json file
         self.__delete_tmp_file(temp_json)
-        # delete the temporary template file if exists
+        # deletes the temporary template file if exists
         if "temp_tpl" in locals():
             self.__delete_tmp_file(temp_tpl)
 
