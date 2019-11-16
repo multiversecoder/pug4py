@@ -5,6 +5,10 @@ mako syntax (a popular and fast template engine for python).
 """
 
 __author__ = "Adriano Romanazzo"
+__copyright__ = "Copyright 2019, Adriano Romanazzo (https://github.com/multiversecoder)"
+__license__ = "MIT"
+__maintainer__ = "https://github.com/multiversecoder"
+__status__ = "Production"
 
 import os
 import ast
